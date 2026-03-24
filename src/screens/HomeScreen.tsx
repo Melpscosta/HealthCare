@@ -197,9 +197,11 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   logo: {
-    fontSize: theme.typography.small.fontSize,
-    color: 'rgba(255,255,255,0.85)',
+    fontSize: 12,
+    fontWeight: '600',
+    color: 'rgba(255,255,255,0.9)',
     marginBottom: 4,
+    letterSpacing: 0.5,
   },
   greeting: {
     fontSize: theme.typography.h1.fontSize,

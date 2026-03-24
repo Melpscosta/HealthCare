@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { useAuth } from '../contexts/AuthContext';
 import { Button, Input, ScreenLayout } from '../components/ui';
@@ -39,13 +39,19 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
 
   return (
     <ScreenLayout scroll keyboardAvoiding>
-      <View style={{ marginTop: theme.spacing.lg, marginBottom: theme.spacing.xl }}>
+      <View style={{ marginTop: theme.spacing.xl, marginBottom: theme.spacing.xxl, alignItems: 'center' }}>
+        <Image
+          source={require('../../assets/icon.png')}
+          style={{ width: 80, height: 80, marginBottom: theme.spacing.md, borderRadius: 18 }}
+          accessibilityLabel="Logo HealthConnect"
+        />
         <Text
           style={{
-            fontSize: theme.typography.h1.fontSize,
+            fontSize: 28,
             fontWeight: '700',
             color: theme.colors.primary,
-            marginBottom: theme.spacing.sm,
+            marginBottom: theme.spacing.xs,
+            letterSpacing: -0.5,
           }}
           accessibilityRole="header"
         >
@@ -55,6 +61,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
           style={{
             fontSize: theme.typography.body.fontSize,
             color: theme.colors.textMuted,
+            textAlign: 'center',
           }}
         >
           Agendamento de consultas médicas

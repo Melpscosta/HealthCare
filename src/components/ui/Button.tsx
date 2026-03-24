@@ -83,8 +83,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: theme.spacing.md,
-    borderRadius: theme.radius.md,
+    paddingHorizontal: theme.spacing.lg,
+    borderRadius: theme.radius.lg,
   },
   text: {
     fontSize: theme.typography.body.fontSize,

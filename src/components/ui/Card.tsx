@@ -19,7 +19,7 @@ export default function Card({
 }: CardProps) {
   const containerStyle = [
     styles.base,
-    variant === 'elevated' && theme.shadows.md,
+    variant === 'elevated' && theme.shadows.sm,
   ];
 
   if (onPress) {
@@ -46,7 +46,9 @@ export default function Card({
 const styles = StyleSheet.create({
   base: {
     backgroundColor: theme.colors.surface,
-    borderRadius: theme.radius.md,
+    borderRadius: theme.radius.lg,
     padding: theme.spacing.md,
+    borderWidth: 1,
+    borderColor: theme.colors.border,
   },
 });
