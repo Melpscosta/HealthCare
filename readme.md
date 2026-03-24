@@ -161,28 +161,15 @@ yarn start
 
 ## 📱 Contas de Demonstração
 
-O sistema inclui contas pré-configuradas para testes:
+O sistema inclui contas pré-configuradas para testes (senha: 123456):
 
-### Administrador
-- **Email**: admin@example.com
-- **Senha**: 123456
-- **Acesso**: Painel administrativo completo
+### Médico
+- joao@example.com (Cardiologia)
+- maria@example.com (Pediatria)
 
-### Médicos
-- **Dr. João Silva**: joao@example.com / 123456 (Cardiologista)
-- **Dra. Maria Santos**: maria@example.com / 123456 (Pediatria)
-- **Dr. Pedro Oliveira**: pedro@example.com / 123456 (Ortopedia)
-- **Dra. Ana Costa**: ana.doctor@example.com / 123456 (Dermatologia)
-- **Dr. Carlos Mendes**: carlos.doctor@example.com / 123456 (Clínico Geral)
-
-### Pacientes
-- **João Teste**: teste@paciente.com / 123456
-- **Ana Paciente**: ana@exemplo.com / 123456
-- **Carlos Paciente**: carlos@exemplo.com / 123456
-- **Maria Paciente**: maria@exemplo.com / 123456
-- **Pedro Usuário**: pedro@usuario.com / 123456
-
-**Todos os usuários utilizam a senha: 123456**
+### Paciente
+- teste@paciente.com
+- ana@exemplo.com
 
 ## 🏗️ Estrutura do Projeto
 
@@ -257,28 +244,6 @@ src/
 - **Navigation**: Configuração de rotas e navegação
 - **API**: Comunicação com serviços externos
 - **Utils**: Funções utilitárias compartilhadas
-
-## 🎯 Princípios de Design
-
-### Cores e Acessibilidade
-- Alto contraste para melhor legibilidade
-- Cores consistentes em toda a aplicação
-- Feedback visual claro para todas as ações
-
-### Tipografia
-- Hierarquia visual clara através de tamanhos e pesos
-- Fontes legíveis em diferentes tamanhos de tela
-- Espaçamento consistente para melhor fluidez
-
-### Componentes
-- Componentes reutilizáveis e bem documentados
-- Props tipadas para desenvolvimento seguro
-- Estilos responsivos e adaptativos
-
-### Feedback Visual
-- Indicadores de loading para operações assíncronas
-- Mensagens de erro claras e específicas
-- Feedback de sucesso para ações concluídas
 
 ## 🔄 Fluxo de Navegação
 
