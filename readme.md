@@ -36,9 +36,68 @@ npm install
 npm start
 ```
 
-Use o Expo Go no celular para escanear o QR code ou execute no emulador:
+Use o Expo Go no celular para escanear o QR code ou execute:
 - Android: `npm run android`
 - iOS: `npm run ios`
+- Web (navegador): `npm run web`
+
+Se o terminal não reconhecer `expo` no Windows, use sempre os scripts npm do projeto (`npm start`, `npm run web`, etc.), pois eles já chamam o Expo local via `npx`.
+
+## Publicar em link na Vercel (Expo Web)
+
+Este projeto pode ser publicado como site estático (versão web do app).
+
+### 1) Gerar build web
+
+Na raiz do projeto:
+
+```bash
+npx expo export -p web
+```
+
+Esse comando gera os arquivos estáticos em `dist`.
+
+### 2) Publicar pela Vercel (mais simples)
+
+1. Suba o projeto para o GitHub.
+2. Acesse [Vercel](https://vercel.com), clique em **Add New > Project**.
+3. Importe o repositório.
+4. Em configurações de build:
+   - **Framework Preset:** `Other`
+   - **Build Command:** `npx expo export -p web`
+   - **Output Directory:** `dist`
+5. Clique em **Deploy**.
+6. A Vercel vai gerar um link público (ex: `https://seu-projeto.vercel.app`).
+
+### 3) Publicar via CLI (alternativa)
+
+```bash
+npm i -g vercel
+vercel login
+vercel
+```
+
+Quando a CLI perguntar:
+- Build command: `npx expo export -p web`
+- Output directory: `dist`
+
+Para publicar produção depois:
+
+```bash
+vercel --prod
+```
+
+### 4) SPA/rotas (opcional, mas recomendado)
+
+Se houver navegação por URL no web app, crie `vercel.json` na raiz:
+
+```json
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+```
 
 ## Contas de demonstração
 
